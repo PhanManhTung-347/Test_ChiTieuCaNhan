@@ -1,5 +1,6 @@
 package com.example.ktgk_2415053122347_phanmanhtung
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -45,6 +46,12 @@ class MainActivity : AppCompatActivity() {
             else
             {
                 Toast.makeText(this, "Mo man hinh chi tiet", Toast.LENGTH_SHORT).show()
+                var intent= Intent(this, ChiTietChiTieu::class.java).apply {
+                    putExtra("TENKHOANCHI",tenKhoanChi347)
+                    putExtra("GHICHU",ghiChu347)
+                    putExtra("SOTIEN",soTien347)
+                }
+                startActivity(intent)
             }
         }
     }
